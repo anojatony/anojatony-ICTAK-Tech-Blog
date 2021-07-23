@@ -1,0 +1,184 @@
+<div>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" rouerLink="">
+      <img src="https://ictkerala.org/wp-content/uploads/2019/01/xcropped-ict-ico.png.pagespeed.ic.RbgklLJ3IG.webp" height="75px" width="85px">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/blog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/createpost" *ngIf="_auth.loggedIn() || _auth.loggeduserIn() || _auth.loggedtrainerIn()">Create post</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/login" *ngIf="!_auth.loggedIn() && !_auth.loggeduserIn() && ! _auth.loggedtrainerIn()">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/signup" *ngIf="!_auth.loggedIn() && !_auth.loggeduserIn() && ! _auth.loggedtrainerIn()">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/signup" *ngIf="_auth.loggedIn() || _auth.loggeduserIn() || _auth.loggedtrainerIn()" (click)="logoutUser()">Log Out</a>
+          </li>
+     </ul>
+     
+     </div>     
+  </nav>
+<!-- ends -->
+
+
+<!--  -->
+<h2 id="blo">FEATURED</h2>
+<section class="blog">
+    <div class="container">
+    <div class="row">
+<!--  -->
+    <div class="col-md-3" *ngFor='let post of featuredposts'>
+        <div class="card mb-5 shadow-sm">
+
+            <img [src]="post.image"  class="img-fluid" alt="">
+        <div class="card-body">
+            <h2>{{post.title}}</h2>
+            
+            <div class="card-text">
+              <ul>
+                <li style="color: black;">{{post.category}}</li>
+                <li style="color: black;">By {{post.author}}</li>
+              </ul>
+               <a routerLink="" class="lab" (click)="singlefBlog(post)">Read More</a>
+             </div>
+            
+    </div>
+          
+    </div>
+    </div>
+    <!--  -->
+
+
+</div>
+<!--  -->
+</div>
+<!-- container ends -->
+</section>
+
+
+
+
+
+<!--  -->
+<h2 id="blos">TRENDING</h2>
+<section class="blogs"  data-aos="fade-up">
+    <div class="container">
+    <div class="row">
+<!--  -->
+    <div class="col-md-4" *ngFor='let post of trendingposts'>
+        <div class="card mb-5 shadow-sm" data-aos="fade-up">
+
+            <img [src]="post.image"  class="img-fluid" alt="">
+        <div class="card-body">
+            <a routerLink="" class="headi"  (click)="singletBlog(post)"><h2>{{post.title}}</h2></a>
+           
+            <div class="card-text">
+              <ul>
+              
+                <li style="color: black;">{{post.category}}</li>
+                <li style="color: black;">By {{post.author}}</li>
+               
+              </ul>
+             </div>
+            
+    </div>
+          
+    </div>
+    </div>
+    <!--  -->
+
+
+    
+</div>
+<!--  -->
+</div>
+<!-- container ends -->
+</section>
+
+
+
+
+<!--  -->
+<h2 id="bl">RECENT</h2>
+
+<!--  -->
+
+<div class="cat">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item" >
+          <a class="nav-link" routerLink="/category/Cyber Security">Cyber Security</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" routerLink="/category/Artificial Intelligence">Artificial Intelligence</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" routerLink="/category/Full Stack Development">Full Stack Development</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/category/Data Science" >Data Science</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/category/Others" >Others</a>
+        </li> 
+        </ul>
+        </div>
+  </nav>
+  </div>
+
+
+<!--  -->
+<section class="featured"  data-aos="fade-up">
+ <div class="container mt-5">
+
+  <!-- card starts -->
+<div class="card" *ngFor='let post of posts' data-aos="fade-up"> 
+  <div class="row">
+  <div class="col-md-4">
+    <div class="inner">
+  <img [src]="post.image" class="img-fluid" alt="">
+  </div>
+  </div>
+  <!-- first column ends -->
+  <div class="col-md-8">
+    <div class="card-body">
+  <div class="card-title mt-2">
+  <h2>{{post.title}}</h2>
+  </div>
+  <div class="card-text">
+    <p>{{post.introduction}}</p>
+    <a rouerLink="" (click)="singleBlog(post)">Read More</a>
+    <label style="margin-left: 60%; color: sienna;">By {{post.author}}</label>
+   </div>
+  </div>
+  
+  </div>
+  <!-- second column ends -->
+  </div>
+  <!-- row ends -->
+  </div>  
+  <!-- card ends -->
+
+
+ 
+
+</div> 
+<!-- container ends -->
+</section>
+
+<!-- ends -->
+
+<app-footer></app-footer>

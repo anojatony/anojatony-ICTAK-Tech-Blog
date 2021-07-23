@@ -1,0 +1,93 @@
+.navbar{
+    background-image: linear-gradient(-90deg, #FF8C00, #DC143C);
+    }
+    .navbar-nav a{
+        font-size: 18px;
+        color: white;
+        padding: 18px;
+        font-family: sans-serif;
+        font-weight: bolder;
+    }
+    .navbar-nav a:hover{
+        border-bottom: 3px solid white;
+        color: white;
+        transition: .2s ease-in-out;
+    }
+ @media (max-width:909px) {
+    .navbar-nav a:hover{
+        border-bottom: none;
+        color: orange;
+        transition: .2s ease-in-out;
+    }
+ }
+
+    #blos{
+        color: orangered;
+        font-weight: bolder;
+        font-size: 2em;
+        margin-bottom: 1%;
+        margin-top: 6%;
+        margin-left: 10%;
+        /* border-bottom: 3px solid #FF8C00; */
+        /* width: 20%; */
+    }
+    .card:hover{
+        border-bottom: 3px solid orange;
+    }
+    
+    .card h2{
+        /* margin-left: 3.5%; */
+        text-align: center;
+        color: #223c50;
+        font-weight: bolder;
+    } .blogs{
+        margin-bottom: 3%;
+        background-color: beige;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        padding-top: 35px;
+        margin-top: 4%;
+    }
+    
+    .blogs .card{
+        position: relative;
+        transition: 0.5s all;
+        height: 460px;
+    }
+    .blogs .card:hover {
+        transform: translateY(20px)
+    }
+    .blogs .card-text a{
+        color: orange;
+        text-decoration: none;
+    }
+    .blogs .card-text a:hover{
+        color: brown;
+        text-decoration: none;
+    }
+    .blogs .card-text ul{
+        padding-left: 0;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        list-style-position: inside;
+        font-size:small;
+
+    }
+    .blogs li::before {
+        content: "• ";
+        color: blue; 
+      }
+    .blogs .card img{
+        height: 185px;
+        width: 100%;
+    }
+    .blogs .card-text{
+        padding-left: 15px;
+        padding-right: 15px;
+        /* padding-top: 15px; */
+        /* padding-bottom: 2px; */
+        
+    }
+   

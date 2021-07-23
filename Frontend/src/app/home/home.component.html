@@ -1,0 +1,135 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" rouerLink="">
+      <img src="https://ictkerala.org/wp-content/uploads/2019/01/xcropped-ict-ico.png.pagespeed.ic.RbgklLJ3IG.webp" height="75px" width="85px">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/blog" >Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/signup">Sign Up</a>
+          </li>
+     </ul>
+     </div>     
+  </nav>
+  <!--  -->
+
+  <!-- carousel -->
+  <div class="carol">
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+          <img src="https://community.connection.com/wp-content/uploads/2020/07/1124625-Azure-and-AI-BLOG.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.pexels.com/photos/919734/pexels-photo-919734.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.pexels.com/photos/3862634/pexels-photo-3862634.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="d-block w-100" alt="...">
+      </div>
+    </div>
+
+</div>
+  <!-- carousel -->
+
+  <div class="banner">
+  <div class="container">
+      <h1 class="banner-title">
+      <span>ICTAK TECH BLOG</span>
+      </h1>
+      <br>
+     <p>Everything that you need to know about Tech.</p>
+  </div>
+  </div>
+
+  <!--  -->
+<section class="about"  data-aos="fade-up">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6">
+                <img src="https://images.pexels.com/photos/2007647/pexels-photo-2007647.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" width="590" class="img-fluid" alt="">
+            </div>
+            <!-- ends -->
+
+            <div class="col-md-6">
+                <h3>ABOUT US</h3>
+                <h1>WE ARE CRETAIVE</h1>
+                <br>
+                <p>Advancement as well as development in the field of technology made a greater impact in every field of the world including marketing, education, bussiness etc. The outcomes of these impacts are E-commerce, E-education, E-reading etc. 
+                    Out of these above mentioned outcomes, E-reading is the most simple and provides a vast and wide variety of resources for the people. E-reading is available through E-books, blogs etc. Through blogs people can read as well as convey their ideas, thoughts, opinions on technology, religion,Geography etc. So as a part of our Project we have choosed the ICTAK TECH BLOG where students and trainers can post their views, write ups, findings etc and admin have the overall control of the blog.</p>
+                <br>
+                <a routerLink="/blog">VIEW BLOG</a>
+                </div>
+                <!-- ends -->
+
+        </div>
+        <!-- row ends -->
+    </div>
+
+</section>
+<!--  -->
+
+
+<section class="like">
+<div class="container-fluid">
+    <div class="d-flex justify-content-end">
+    <div class="d-flex flex-column">
+    <h1 class="heading1">Like & Comment Your Thoughts.</h1>
+    <p>You can share your thoughts here.
+    </p>
+    <a routerLink="/login">SHOW</a>
+    </div>
+    </div>
+</div>
+</section>
+<!--  -->
+
+<h2 id="blo">FEATURED</h2>
+<section class="blog"  data-aos="fade-up">
+    <div>
+    <div class="container">
+    <div class="row">
+<!--  -->
+    <div class="col-lg-4 col-md-6 col-sm-12" *ngFor='let post of posts'>
+        <div class="card mb-5 shadow-sm"  data-aos="fade-up">
+             <div class="inner">
+            <img [src]="post.image" class="img-fluid" alt="">
+        </div>
+            <div class="card-body">
+            <h2>{{post.title}}</h2>
+        
+        <div class="card-text">
+         <p>{{post.introduction}}</p>
+         <a rouerLink="" (click)="singleBlog(post)" style="margin-top: 2%;">Read More</a>
+        </div>
+    </div>
+          
+    </div>
+    </div>
+    <!--  -->
+
+        
+    </div>
+    <!-- row ends -->
+</div>
+</div> 
+</section>
+<!-- ends -->
+
+
+<app-footer></app-footer>

@@ -1,0 +1,286 @@
+.navbar{
+    background-image: linear-gradient(-90deg, #FF8C00, #DC143C);
+    }
+    .navbar-nav a{
+        font-size: 18px;
+        color: white;
+        padding: 18px;
+        font-family: sans-serif;
+        font-weight: bolder;
+    }
+    
+
+     
+    .navbar-nav a:hover{
+        border-bottom: 3px solid white;
+        color: white;
+        transition: .2s ease-in-out;
+    }
+ @media (max-width:909px) {
+    .navbar-nav a:hover{
+        border-bottom: none;
+        color: orange;
+        transition: .2s ease-in-out;
+    }
+ }
+
+ .bottom-nav{
+     width: 100%;
+     background-color: black;
+     padding: 0 50px;
+ }
+ .bottom-nav ul{
+     width: 100%;
+     height: 45px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+ .bottom-nav ul li a{
+color: white;
+letter-spacing: 2px;
+font-size: 12px;
+ }
+    /* featured */
+    .blog{
+        margin-top: 1%;
+        margin-bottom: 3%;
+        background-color: #E6E6FA;
+        padding-top: 40px;
+    }
+    /* .card{
+        background-color: #F0F8FF;
+    } */
+    #blo{
+        color: orangered;
+        font-weight: bolder;
+        font-size: 2em;
+        margin-bottom: 2%;
+        margin-top: 5%;
+        margin-left: 10%;
+        border-bottom: 3px solid #FF8C00;
+        width: 10%;
+    }
+    
+    #bl{
+        color: orangered;
+        font-weight: bolder;
+        font-size: 2em;
+        margin-bottom: 3%;
+        margin-top: 2%;
+        margin-left: 10%;
+        border-bottom: 3px solid #FF8C00;
+        width: 7.5%;
+    }
+    #blos{
+        color: orangered;
+        font-weight: bolder;
+        font-size: 2em;
+        margin-bottom: 3%;
+        margin-top: 2%;
+        margin-left: 10%;
+        border-bottom: 3px solid #FF8C00;
+        width: 10%;
+    }
+    .card:hover{
+        border-bottom: 3px solid orange;
+    }
+    
+    .card h2{
+        /* margin-left: 3.5%; */
+        text-align: center;
+        color: #223c50;
+        font-weight: bolder;
+    }
+   
+    .blog .card-text{
+        padding-left: 15px;
+        padding-right: 15px;
+        /* padding-top: 15px; */
+        /* padding-bottom: 2px; */
+        align-items: center;
+        
+    }
+   .blog .card{
+       height: 355px;
+   }
+    .blog .card-text ul{
+        padding-left: 0;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        list-style-position: inside;
+        font-size:small;
+    }
+    .blog li::before {
+        content: "• ";
+        color: blue; 
+      }
+    
+    .card-text p{
+        font-family: 'Roboto', sans-serif;
+        text-align: justify;
+    }
+    
+    .blog .card img{
+        height: 185px;
+        width: 100%;
+    }
+    .blog .card{
+        position: relative;
+        overflow: hidden;
+    }
+    .blog .card::before{
+        position: absolute;
+        content: '';
+        width: 80%;
+        height: 220%;
+        /* background: rgba(235,53,131,0.7); */
+        background-color: rgba(249, 105, 14, 1);
+        top: -50%;
+        left: -100%;
+        z-index: 1;
+        transform: rotate(25deg);
+        transform-origin: center top 0;
+        transition: .5s;
+        opacity: 0.95;
+    }
+    .blog .card:hover:before{
+        left: 10%;
+    }
+    .lab{
+        width: 100%;
+        padding: 0 20px;
+        position: absolute;
+        top: -100%;
+        color: #fff;
+        left: 0;
+        z-index: 2;
+        transition: 1.1s;
+        text-decoration: none;
+        font-weight: bolder;
+    }
+    .blog .card:hover .lab{
+        top: 80px;
+    }
+    .featured .card-text a{
+        font-size: 14px;
+        background-color: crimson;
+        padding: 10px 20px;
+        color: white;
+        transition: all 0.5s ease-in;
+        border: none;
+        text-decoration: none;
+        font-weight: bolder;
+    
+    }
+    
+    .featured .card-text a:hover{
+        font-size: 14px;
+        background-color: white;
+        border:  1px solid brown;
+        color: brown;
+        border-top-right-radius: 20px;
+        text-decoration: none;
+        font-weight: bolder;
+    }   
+
+    .featured .card img{
+        height: 237px;
+        width: 100%;
+    }
+    .featured .card{
+        margin-bottom: 0.8%;
+    }
+    .featured .card-text{
+        padding-left: 15px;
+        padding-right: 15px;
+        /* padding-top: 15px; */
+        padding-bottom: 2px;
+        
+    }
+    .featured{
+        margin-bottom: 6%;
+        background-color: #DCDCDC;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 50px;
+        padding-top: 3px;
+    }
+    .blogs{
+        margin-bottom: 3%;
+        background-color: beige;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        padding-top: 35px;
+    }
+    
+    .blogs .card-text a{
+        color: orange;
+        text-decoration: none;
+    }
+    .blogs .card-text a:hover{
+        color: brown;
+        text-decoration: none;
+    }
+    
+    .blogs .card{
+        position: relative;
+        transition: 0.5s all;
+        height: 380px;
+    }
+    .blogs .card:hover {
+        transform: translateY(20px)
+    }
+
+    .blogs .card-text ul{
+        padding-left: 0;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        list-style-position: inside;
+        font-size:small;
+
+    }
+    .blogs li::before {
+        content: "• ";
+        color: blue; 
+      }
+    .blogs .card img{
+        height: 185px;
+        width: 100%;
+    }
+    .blogs .card-text{
+        padding-left: 15px;
+        padding-right: 15px;
+        /* padding-top: 15px; */
+        /* padding-bottom: 2px; */
+        
+    }
+    .headi:hover{
+        text-decoration: none;
+    }
+    .inner{
+        overflow: hidden;
+    }
+    .inner img{
+    transition: all 1.5s ease;
+    }
+    .inner:hover img{
+        transform: scale(1.5);
+    }
+    
+    .cat{
+        margin-top: 3%;
+        margin-bottom: 3%;
+
+    }
+    .cat li a{
+        color: white;
+        border-bottom: none;
+    }
+    .cat li a:hover{
+        color: black;
+    }
+   
