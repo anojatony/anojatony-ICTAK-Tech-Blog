@@ -17,7 +17,7 @@ import { SingletrendingComponent } from './singletrending/singletrending.compone
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'blog',component:BlogComponent},
-  {path:'createpost',canActivate:[AuthGuard],component:CreatpostComponent},
+  {path:'createpost', component:CreatpostComponent},
   {path:'category/:cat',component:CategoryComponent},
   {path:'singleblog',component:SingleblogComponent},
   {path:'singlefeature',component:SinglefeatureComponent},
